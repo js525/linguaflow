@@ -19,8 +19,7 @@ function CourseDetail() {
       navigate('/login');
       return;
     }
-    // 如果已登录，可以开始学习
-    alert('开始学习功能开发中...');
+    navigate('/learn/vocabulary');
   };
 
   if (!course) {
@@ -172,7 +171,10 @@ function CourseDetail() {
                       {lesson.isCompleted ? (
                         <div className="text-emerald-600 font-semibold">已完成</div>
                       ) : (
-                        <button className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-all">
+                        <button 
+                          onClick={handleStartLearning}
+                          className="flex items-center gap-2 bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-all"
+                        >
                           <Play className="w-4 h-4" />
                           开始
                         </button>

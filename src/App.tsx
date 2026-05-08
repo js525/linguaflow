@@ -31,11 +31,7 @@ function App() {
             <Dashboard />
           </ProtectedRoute>
         } />
-        <Route path="/courses" element={
-          <ProtectedRoute>
-            <CourseCenter />
-          </ProtectedRoute>
-        } />
+        <Route path="/courses" element={<CourseCenter />} />
         <Route path="/courses/:courseId" element={<CourseDetail />} />
         <Route path="/learn/vocabulary" element={
           <ProtectedRoute>
